@@ -1,9 +1,8 @@
-function combine(
-  n1: number | string,
-  n2: number | string,
-  conversion: "toNum" | "toString"
-) {
-  let result: number | string;
+type numOrString = number | string;
+type conversionType = "toNum" | "toString";
+
+function combine(n1: numOrString, n2: numOrString, conversion: conversionType) {
+  let result: numOrString;
   if (
     (typeof n1 === "number" && typeof n2 === "number") ||
     conversion === "toNum"
