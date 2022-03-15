@@ -1,8 +1,12 @@
 var person = {
     name: "Nick",
     age: 30,
-    hobbies: ["Gaming", "Cooking"]
+    hobbies: ["Gaming", "Cooking"],
+    role: [2, "author"]
 };
+console.log(person.role);
+person.role.push("asdf");
+console.log(person.role);
 var favoriteActivities;
 favoriteActivities = ["Gaming"];
 console.log(person.name);
