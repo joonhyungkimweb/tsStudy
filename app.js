@@ -1,31 +1,12 @@
-var Role;
-(function (Role) {
-    Role[Role["ADMIN"] = 0] = "ADMIN";
-    Role[Role["READ_ONLY"] = 1] = "READ_ONLY";
-    Role[Role["AUTHOR"] = 2] = "AUTHOR";
-})(Role || (Role = {}));
-// const person: {
-//   name: string;
-//   age: number;
-//   hobbies: string[];
-//   role: [number, string];
-// } = {
-var person = {
-    name: "Nick",
-    age: 30,
-    hobbies: ["Gaming", "Cooking"],
-    role: Role.ADMIN
-};
-// console.log(person.role);
-// person.role.push("asdf");
-// console.log(person.role);
-var favoriteActivities;
-favoriteActivities = ["Gaming"];
-console.log(person.name);
-for (var _i = 0, _a = person.hobbies; _i < _a.length; _i++) {
-    var hobby = _a[_i];
-    console.log(hobby.toUpperCase());
+function combine(n1, n2) {
+    if (typeof n1 === "number" && typeof n2 === "number") {
+        return n1 + n2;
+    }
+    else {
+        return n1.toString() + n2.toString();
+    }
 }
-if (person.role === Role.ADMIN) {
-    console.log("ADMIN");
-}
+var combinedAges = combine(30, 26);
+console.log(combinedAges);
+var combineNames = combine("Kim", "Kelly");
+console.log(combineNames);
