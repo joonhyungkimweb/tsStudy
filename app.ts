@@ -1,30 +1,16 @@
-function add(n1: number, n2: number) {
-  return n1 + n2;
+let userInput: unknown;
+let userName: string;
+
+userInput = 5;
+userInput = "Nick";
+
+if (typeof userInput === "string") {
+  userName = userInput;
 }
 
-function printResult(num: number) {
-  console.log("Result : ", num);
+function generateEror(message: string, code: number): never {
+  throw { message, errorCode: code };
+  //   while (true) {}
 }
 
-function addANdHandle(n1: number, n2: number, cb: (num: number) => void) {
-  const result = n1 + n2;
-  const a = cb(result);
-  console.log(a);
-  return a;
-}
-
-printResult(add(5, 12));
-
-let combineValues: (a: number, b: number) => number;
-
-combineValues = add;
-// combineValues = printResult;
-// combineValues = 5;
-
-console.log(combineValues(4, 4));
-
-addANdHandle(1, 2, (num: number) => {
-  console.log(num);
-
-  return num + 4;
-});
+generateEror("network error", 500);
