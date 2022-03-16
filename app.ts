@@ -1,27 +1,9 @@
-type numOrString = number | string;
-type conversionType = "toNum" | "toString";
-
-function combine(n1: numOrString, n2: numOrString, conversion: conversionType) {
-  let result: numOrString;
-  if (
-    (typeof n1 === "number" && typeof n2 === "number") ||
-    conversion === "toNum"
-  ) {
-    result = +n1 + +n2;
-  } else {
-    result = n1.toString() + n2.toString();
-  }
-
-  return result;
+function add(n1: number, n2: number) {
+  return n1 + n2;
 }
-const combinedAges = combine(30, 26, "toNum");
 
-console.log(combinedAges);
+function printResult(num: number) {
+  console.log("Result : ", num);
+}
 
-const combinedStringAges = combine("30", "26", "toNum");
-
-console.log(combinedStringAges);
-
-const combineNames = combine("Kim", "Kelly", "toString");
-
-console.log(combineNames);
+printResult(add(5, 12));
